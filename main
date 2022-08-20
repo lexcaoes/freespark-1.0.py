@@ -23,7 +23,7 @@ class fs(QWidget):
         self.repaint()
         #设置图片
         self.image = QLabel(self)
-        self.image.setPixmap(QPixmap.fromImage(self.loadImage('D:\qq\pythonProject\p1.png')))
+        self.image.setPixmap(QPixmap.fromImage(self.loadImage('D:\python\pythonProject\p1.png')))
         self.image.setScaledContents (False)
         #窗口设置
         self.move(800, 800)
@@ -39,7 +39,8 @@ class fs(QWidget):
             action+=1
         elif action==5:
             action=0
-        a=os.path.join('D:\\','qq','pythonProject','p'+list[action]+'.png')
+        a=os.path.join('D:\\','python','pythonProject','p'+list[action]+'.png')
+        '''桌面动画一帧图片'''
         self.image.setPixmap(QPixmap.fromImage(self.loadImage(a)))
 
     def loadImage(self, ip):
@@ -71,7 +72,7 @@ if __name__ == '__main__':
  pet.show()
  # 托盘设置
  plate = QSystemTrayIcon(pet)
- plate.setIcon(QIcon('D:\qq\pythonProject\\2.png'))
+ plate.setIcon(QIcon('D:\python\pythonProject\\2.png'))
  a1 = QAction('&显示(Show)', triggered=pet.show)
  def quitApp():
    QCoreApplication.instance().quit()
